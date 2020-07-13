@@ -307,9 +307,7 @@ static void uncaught_exception_handler(NSException *exception) {
 
 ### 捕获到Crash info时，如何阻止App闪退，做到保活实时上传?
 
-<img src="/Users/liwenhao/Desktop/E4792FFB-64B6-4606-9EB2-E55F97682E9C.jpeg" alt="E4792FFB-64B6-4606-9EB2-E55F97682E9C" style="zoom:10%;" />
-
-<img src="/Users/liwenhao/Desktop/QQ20200521-163516@2x.png" alt="QQ20200521-163516@2x" style="zoom:10%;" />
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ggpnd0l4u5j30kw1j8e31.jpg" alt="image-20200713210504275" style="zoom:10%;" />
 
 #### 看一下崩溃时的系统堆栈流程的源码
 
@@ -587,9 +585,3 @@ __block BOOL success = NO;
 ```
 
 这个效果和上面2一样，但是这个要放心许多，没有去主动去stop runloop
-
-
-
-
-
-
