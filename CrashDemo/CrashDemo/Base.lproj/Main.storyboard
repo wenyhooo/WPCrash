@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GYQ-NJ-ZOh"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Ot-vS-ele"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVj-Uo-ydM">
+                                <rect key="frame" x="132" y="144" width="150" height="100"/>
+                                <color key="backgroundColor" red="0.14117647059999999" green="0.20000000000000001" blue="0.34901960780000002" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="eIq-Je-HM6"/>
+                                    <constraint firstAttribute="width" constant="150" id="yK1-nf-XCg"/>
+                                </constraints>
+                                <state key="normal" title="捕获越界crash"/>
+                                <connections>
+                                    <action selector="beyondBoundsCrashAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MFW-oS-PYw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AP-8M-XPd">
+                                <rect key="frame" x="132" y="244" width="150" height="100"/>
+                                <color key="backgroundColor" red="0.72156862749999995" green="0.37647058820000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Fky-gp-y0e"/>
+                                    <constraint firstAttribute="height" constant="100" id="Mb5-2Q-wsz"/>
+                                </constraints>
+                                <state key="normal" title="捕获crash"/>
+                                <connections>
+                                    <action selector="crashAndUpload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r9j-Te-0wA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77Z-JH-RxX">
+                                <rect key="frame" x="132" y="364" width="150" height="100"/>
+                                <color key="backgroundColor" systemColor="quaternaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.17999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="HNJ-ko-wXQ"/>
+                                    <constraint firstAttribute="height" constant="100" id="YkJ-wV-biW"/>
+                                </constraints>
+                                <state key="normal" title="野指针 捕获signal"/>
+                                <connections>
+                                    <action selector="signalAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JOb-81-E4q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3k-p0-DAS">
+                                <rect key="frame" x="132" y="464" width="150" height="100"/>
+                                <color key="backgroundColor" red="0.5568627451" green="0.58039215690000001" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="uae-Xl-Fd5"/>
+                                    <constraint firstAttribute="height" constant="100" id="xn0-m4-wGX"/>
+                                </constraints>
+                                <state key="normal" title="试试程序死了吗？"/>
+                                <connections>
+                                    <action selector="appActiveAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r8r-8Y-wXT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="W3k-p0-DAS" firstAttribute="top" secondItem="77Z-JH-RxX" secondAttribute="bottom" id="9BY-FO-PYM"/>
+                            <constraint firstItem="4AP-8M-XPd" firstAttribute="top" secondItem="ZVj-Uo-ydM" secondAttribute="bottom" id="OrQ-j7-RT6"/>
+                            <constraint firstItem="77Z-JH-RxX" firstAttribute="centerX" secondItem="4AP-8M-XPd" secondAttribute="centerX" id="Qg3-25-Jnf"/>
+                            <constraint firstItem="ZVj-Uo-ydM" firstAttribute="top" secondItem="GYQ-NJ-ZOh" secondAttribute="bottom" constant="100" id="d7I-4s-uwg"/>
+                            <constraint firstItem="W3k-p0-DAS" firstAttribute="centerX" secondItem="77Z-JH-RxX" secondAttribute="centerX" id="f1d-1G-WbT"/>
+                            <constraint firstItem="77Z-JH-RxX" firstAttribute="top" secondItem="4AP-8M-XPd" secondAttribute="bottom" constant="20" id="hwI-J3-19h"/>
+                            <constraint firstItem="ZVj-Uo-ydM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pex-e6-jE5"/>
+                            <constraint firstItem="4AP-8M-XPd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x5c-Mh-qzO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+</document>
