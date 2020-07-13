@@ -1,4 +1,3 @@
-
 * [前言：](#前言)
  * [crash 分三大类](#crash-分三大类)
     * [1.Mach 异常](#1mach-异常)
@@ -36,6 +35,7 @@
        * [1.就在crash的异常捕获函数里，先写个while循环试试把](#1就在crash的异常捕获函数里先写个while循环试试把)
        * [2.Crash时调用下CFRunLoopRun](#2crash时调用下cfrunlooprun)
        * [3.Crash时调用下CFRunLoopRunInMode()](#3crash时调用下cfrunloopruninmode)
+
 
 
 ## 前言：
